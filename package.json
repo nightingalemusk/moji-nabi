@@ -1,0 +1,30 @@
+{
+  "name": "moji-nabi",
+  "version": "1.0.0",
+  "description": "A simple text converter application built with React.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koko1928/moji-nabi/"
+  },
+  "keywords": [
+    "react",
+    "text converter",
+    "encoding",
+    "decoding"
+  ],
+  "author": "Yusuke Toyama",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "iconv-lite": "^0.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  }
+}
