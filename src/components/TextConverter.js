@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import iconv from 'iconv-lite';
-import { Buffer } from 'buffer';
 
 function TextConverter() {
   const [inputText, setInputText] = useState('');
   const [results, setResults] = useState([]);
-  
+
   const onSubmit = () => {
     const updatedResults = results.map(({ encoding, decoding }) => {
-      const encoded = iconv.encode(inputText, encoding);
-      const decoded = iconv.decode(Buffer.from(encoded), decoding);
+      const encoded = new TextEncoder().encode(inputText);
+      const decoded = new TextDecoder().decode(encoded);
       return { encoding, decoding, result: decoded };
     });
     setResults(updatedResults);
